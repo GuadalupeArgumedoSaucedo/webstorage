@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="Example()">Save Product</button>
+    <script>
+
+       function Example() {
+
+
+        let myObject = {
+
+            product: "Nike", 
+            price: 200
+        }
+        localStorage.setItem("cartItems3", JSON.stringify(myObject))
+       }
+        
+    function saveCartToLocalStorage() {
+        const products = [];
+        products.push({product: Nike, price: 200});
+      localStorage.setItem("cartItems2", JSON.stringify(products));
+    }
+    </script>
+</body>
+</html>

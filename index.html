@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Iphone
+    <button id="" onclick="addToCart('Iphone')">Add to Shopping cart</button>
+
+
+    <div id='myShoppingCart'>
+        test
+    </p>
+
+<script>
+    
+    let myItems = [];
+    function addToCart(_item) {
+        myItems.push(_item);
+      
+      
+        localStorage.setItem('MyProducts',myItems);
+        let lastProductViewed;
+         lastProductViewed = localStorage.getItem('MyProducts'); // grab from application memory
+         document.getElementById('myShoppingCart').innerHTML = lastProductViewed;
+    }
+
+
+</script>
+
+</body>
+</html>

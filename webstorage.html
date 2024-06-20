@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Storage Example</title>
+  <script>
+    function storeName() {
+      let name = document.getElementById("name").value; // Get the name from the input field
+      localStorage.setItem("storedName", name); // Store the name in localStorage
+      alert("Name stored successfully!");
+    }
+
+    function retrieveName() {
+      let storedName = localStorage.getItem("storedName"); // Retrieve the name from session storage
+      if (storedName) {
+        document.getElementById("name").value = storedName; 
+        alert("Stored name: " + storedName);
+      } else {
+        alert("No name found in storage.");
+      }
+    }
+
+    
+/*
+    function loadName() {
+      let storedName = localStorage.getItem("storedName"); // Retrieve the name from localStorage
+      if (storedName) {
+        alert("Stored Name: " + storedName);
+        document.getElementById("name").value = storedName; 
+      }
+    }
+
+    window.onload = loadName;
+*/
+
+
+  </script>
+</head>
+<body>
+  <h1>Web Storage Example</h1>
+  
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name" placeholder="Your name" />
+
+  <button onclick="storeName()">Store Name</button>
+  <button onclick="retrieveName()">Retrieve Name</button>
+
+  <a href="example.html">Go to Example Page</a>
+</body>
+</html>

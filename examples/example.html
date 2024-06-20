@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hi</h1>
+ <div id="message">
+
+ </div>
+ <button onclick="retrieveName()">Retrieve Name</button>
+ <script>
+  function retrieveName() {
+      var storedName = sessionStorage.getItem("storedName"); // Retrieve the name from localStorage
+      if (storedName) {
+        document.getElementById('message').innerHTML = storedName
+     
+      } else {
+        alert("No name found in storage.");
+      }
+    }
+ </script>
+</body>
+</html>
